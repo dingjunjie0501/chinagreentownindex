@@ -1,0 +1,207 @@
+.header {
+    background: url(../img/header-bg.png) no-repeat no-repeat center;
+    height: 80px;
+    position: relative;
+    z-index: 1000;
+}
+
+.header .layui-main {
+    height: 80px;
+}
+
+.header .layui-nav {
+    position: absolute;
+    right: 0;
+    top: 23px;
+    padding: 0;
+    background-color: initial;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 17px;
+}
+
+.header .layui-nav .layui-nav-item {
+    line-height: 22px;
+    margin-left: 6px;
+}
+
+.header .layui-nav .layui-nav-item a {
+    font-size: 16px;
+    color: #032E1B;
+    padding: 6px 12px;
+}
+
+.header .layui-nav .layui-nav-item a:hover,
+.header .layui-nav .layui-this a {
+    color: #fff;
+    background: #007440;
+    border-radius: 100px;
+    padding: 6px 12px;
+}
+
+.header .layui-nav .layui-this:after,
+.header .layui-nav-bar,
+.header .layui-nav-tree .layui-nav-itemed:after {
+    background-color: initial;
+    height: 0;
+}
+
+.header .header-tip {
+    position: absolute;
+    left: 154px;
+    top: 20px;
+    width: 168px;
+    padding: 0;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #007440;
+    line-height: 20px;
+}
+
+.content .category {
+    background: rgba(62, 166, 118, .08);
+    margin-top: 20px;
+}
+
+.content .category .category-item {
+    width: 14.285714285714285%;
+    float: left;
+    text-align: center;
+    color: #333333;
+    height: 46px;
+    line-height: 46px;
+}
+
+.content .category .category-item .name {
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    padding: 4px 12px;
+}
+
+.content .category .category-item.select .name {
+    border: 1px solid rgba(0, 116, 64, 0.60);
+    border-radius: 31px;
+}
+
+.content .banner {
+    margin-top: 20px;
+}
+
+.content .banner img {
+    width: 100%;
+}
+
+.content .section {
+    margin-top: 20px;
+}
+
+.content .section .section-header {
+    font-size: 20px;
+    color: #333333;
+    padding-left: 23px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.content .section .section-header .header-icon {
+    display: inline-block;
+    background: url(../img/header-icon.png) no-repeat no-repeat center;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+.content .section .section-content .point-icon {
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    background: #333333;
+    border-radius: 100%;
+    position: absolute;
+    top: 13px;
+}
+
+.content .section .section-content .name {
+    display: inline-block;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.content .section .section-content .time {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.content .section .section-content .left-img {
+    padding-right: 10px;
+    height: 160px;
+    line-height: 160px;
+}
+
+.content .section .section-content .left-img img {
+    width: 175px;
+    height: 140px;
+}
+
+.content .section .section-content a:hover {
+    color: #007440;
+}
+
+.content .section .bd ul li {
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.content .section .bd .bd-bd ul li {
+    padding-right: 0;
+}
+
+.content .section .section-content li {
+    position: relative;
+    padding-right: 80px;
+}
+
+.content .section .section-content .bd-bd .bd-bd-header {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    background: #F0F8F4;
+    padding: 0 47px 0 24px;
+}
+
+.content .section .section-content .bd-bd .bd-bd-header .bd-bd-header-right {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    color: #666666;
+}
+
+.more-icon {
+    display: inline-block;
+    background: url(../img/more.png) no-repeat no-repeat center;
+    width: 10px;
+    height: 10px;
+}
+
+.content .section .section-content .bd-bd .bd-bd-content {
+    padding-left: 14px;
+}
+
+.footer {
+    padding: 30px 0;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    font-weight: 300;
+}
