@@ -17,6 +17,8 @@
 </head>
 
 <body>
+
+    <!-- 头部开始 -->
     <div class="header">
         <div class="layui-main">
             <a class="logo" href="/">
@@ -54,9 +56,13 @@
             </ul>
         </div>
     </div>
+    <!-- 头部结束 -->
 
+    <!-- 中间内容开始 -->
     <div class="content">
         <div class="layui-main" id="main-body">
+
+            <!-- 类别开始 -->
             <div class="category">
                 <div class="layui-row">
                     <div class="category-item">
@@ -122,9 +128,15 @@
                     <div class="category-item">……</div>
                 </div>
             </div>
+            <!-- 类别结束 -->
+
+            <!-- banner开始 -->
             <div class="banner">
                 <img src="src/img/banner.jpg" alt="banner">
             </div>
+            <!-- banner结束 -->
+
+            <!-- 动态要闻开始 -->
             <div class="section">
                 <div class="section-header">
                     <i class="header-icon"></i>动态要闻
@@ -225,6 +237,9 @@
                     </div>
                 </div>
             </div>
+            <!-- 动态要闻结束 -->
+
+            <!-- 精华贴吧开始 -->
             <div class="section">
                 <div class="section-header">
                     <i class="header-icon"></i>精华贴吧
@@ -311,6 +326,9 @@
                     </div>
                 </div>
             </div>
+            <!-- 精华贴吧结束 -->
+
+            <!-- 公司报刊文章开始 -->
             <div class="section">
                 <div class="section-header">
                     <i class="header-icon"></i>公司报刊文章
@@ -426,17 +444,24 @@
 
                 </div>
             </div>
+            <!-- 公司报刊文章结束 -->
+
+            <div id="test"></div>
         </div>
     </div>
+    <!-- 中间内容结束 -->
 
+    <!-- 底部开始 -->
     <div class="layui-footer footer">
         <div class="layui-main">
             <p>© 绿城中国控股有限公司 浙ICP备05064294号-1 浙公网安备33010602004015号</p>
             <p>全国客服热线：95059</p>
         </div>
     </div>
+    <!-- 底部结束 -->
 
     <!-- Javascript -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="src/layui/layui.js"></script>
     <script>
         layui.use('element', function () {
@@ -449,26 +474,30 @@
             });
         });
 
-        // layui.use('flow', function () {
-        //     var flow = layui.flow;
+        layui.use('flow', function () {
+            var flow = layui.flow;
 
-        //     flow.load({
-        //         elem: '#main-body', //流加载容器
-        //         end: ' ',
-        //         done: function (page, next) { //执行下一页的回调
-        //             //模拟数据插入
-        //             setTimeout(function () {
-        //                 var lis = [];
-        //                 for (var i = 0; i < 8; i++) {
-        //                     lis.push('<li>' + ((page - 1) * 8 + i + 1) + '</li>')
-        //                 }
-        //                 //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
-        //                 //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
-        //                 next(lis.join(''), false); //假设总页数为 10
-        //             }, 500);
-        //         }
-        //     });
-        // });
+            flow.load({
+                elem: '#test', //流加载容器
+                end: ' ',
+                done: function (page, next) { //执行下一页的回调
+                    //模拟数据插入
+                    setTimeout(function () {
+                        debugger;
+                        $('#test').load("template.html", function (data) {
+                            debugger
+                        });
+                        var lis = [];
+                        for (var i = 0; i < 8; i++) {
+                            lis.push('<li>' + ((page - 1) * 8 + i + 1) + '</li>')
+                        }
+                        //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
+                        //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
+                        next(lis.join(''), false); //假设总页数为 10
+                    }, 500);
+                }
+            });
+        });
     </script>
 </body>
 
