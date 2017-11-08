@@ -486,10 +486,7 @@
                         url: "template.html",
                         async: false
                     });
-                    debugger;
-                    $('#test').load("template.html", function (data) {
-                        next(data, false);
-                    });
+                    next(template.responseText, false);
                 }
             });
         });
