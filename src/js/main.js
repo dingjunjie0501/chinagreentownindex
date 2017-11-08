@@ -72,6 +72,7 @@ function loadNav(data) {
         var flow = layui.flow;
 
         var elem = '#main-body';
+        $(elem).html('');
 
         flow.load({
             elem: elem, //流加载容器
