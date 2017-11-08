@@ -14,7 +14,7 @@
     right: 0;
     top: 23px;
     padding: 0;
-    background-color: initial;
+    background-color: transparent;
 }
 
 .logo {
@@ -131,6 +131,9 @@
     display: inline-block;
     padding-left: 10px;
     width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .content .section .section-content .time {
