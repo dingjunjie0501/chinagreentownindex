@@ -445,8 +445,6 @@
                 </div>
             </div>
             <!-- 公司报刊文章结束 -->
-
-            <div id="test"></div>
         </div>
     </div>
     <!-- 中间内容结束 -->
@@ -482,19 +480,9 @@
                 end: ' ',
                 done: function (page, next) { //执行下一页的回调
                     //模拟数据插入
-                    setTimeout(function () {
-                        debugger;
-                        $('#test').load("template.html", function (data) {
-                            debugger
-                        });
-                        var lis = [];
-                        for (var i = 0; i < 8; i++) {
-                            lis.push('<li>' + ((page - 1) * 8 + i + 1) + '</li>')
-                        }
-                        //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
-                        //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
-                        next(lis.join(''), false); //假设总页数为 10
-                    }, 500);
+                    $('#test').load("template.html", function (data) {
+                        next(data, false);
+                    });
                 }
             });
         });
